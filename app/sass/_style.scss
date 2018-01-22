@@ -14,7 +14,7 @@ $color-5: #008CC7;	// LIGHT ORANGE
 $font-family-1: "Verdana";
 $font-family-2: "Days";
 
-$color-scroll: $color-2;
+$color-scroll: $color-1;
 $color-footer: #0071BC;
 
 $color-gray_1: #AABFDC;
@@ -172,6 +172,9 @@ $color-gray_3: #212121;
 	*{
 		letter-spacing: 0;
 	}
+}
+.letter-3{
+	letter-spacing: 3px;
 }
 
 
@@ -350,7 +353,8 @@ dib{
 	color: white;
 }
 .color-black{
-	color: black;
+	//color: black;
+	color: #382914;
 }
 
 .color-gray{
@@ -424,6 +428,8 @@ dib{
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .btn{
@@ -490,7 +496,7 @@ dib{
 
 
 
-.btn-def{
+.btn-def, .btn-icon{
 	@extend .btn-style;
 	color: white;
 	background-color: $color-1;
@@ -498,6 +504,36 @@ dib{
 	&:hover{
 		background-color: $color-2;
 	}
+}
+.btn-icon{
+	background-color: white;
+	color: $color-1;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 500;
+	.vam{
+		padding-right: 10px;
+	}
+	a{
+		padding: 10px 45px;
+	}
+	i{
+		padding-left: 15px;
+		vertical-align: middle;
+		border-left: 1px solid $color-1;
+		font-size: 1.5em;
+		transition: all 0.3s ease-in-out;
+	}
+	&:hover{
+		background-color: $color-1;
+		i{
+			border-color: white;
+			transform: translateX(5px);
+		}
+
+		color: white;
+	}
+
 }
 
 
@@ -1131,6 +1167,7 @@ h1{
 
 }
 h2{
+	text-transform: uppercase;
 	font-size: em(26, 16);
 	margin-top: 20px;
 	margin-bottom: 10px;
@@ -1195,23 +1232,6 @@ img[align="left"]{
 
 }
 
-.bg-mountain, 
-.bg-novelties, 
-.bg-about
-{
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bg-mountain{
-	background-image: url("../img/bg/mountain.jpg");
-}
-.bg-novelties{
-	background-image: url("../img/bg/novelties.jpg");
-}
-.bg-about{
-
-}
 
 
 .flex-align-center{
@@ -1465,7 +1485,7 @@ a[target="_blank"]{
 
 
 
-
+//SHORT_BRANDS
 .short-brands{
     //background-size: cover;
     background-repeat: no-repeat;
@@ -1485,14 +1505,46 @@ a[target="_blank"]{
 
 
 
+//SHORT-RANGE
+
+.short-range-top{
+	height: 400px;
+	overflow: hidden;
+}
+.short-range-desc{
+	height: 100%;
+}
+.short-range-bottom{
+	.cell-hover{
+		opacity: 1;
+	}
+	.small-desc{
+		transition: all 0.3s ease-in-out;
+	}
+	figure{
+		&:hover{
+			.small-desc{
+				opacity: 0;
+				visibility: hidden;
+			}
+			.cell-hover{
+				background-color: rgba($color-1, 0.5);
+			}
+		}
+	}
+}
 
 
 
 
-
-
-
-
+.cell-hover{
+	@extend .fuller;
+	pointer-events: none;
+	transition: all 0.3s ease-in-out;
+	background-color: rgba(black, 0.5);
+	display: flex;
+	align-items: center;
+}
 
 
 
