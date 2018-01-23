@@ -51,24 +51,7 @@ $(function(){
 			easing : true
 		});
 
-	// MMENU
-	$("#min-menu").mmenu({
-		"extensions": [
-			"fx-menu-zoom",
-			"fx-panels-zoom",
-			"pagedim-black",
-			"theme-dark"
-		],
-		"offCanvas": {
-			"position": "right"
-		},
-		"navbars": [
-			{
-			"position": "top"
-			}
-		]
-	});
-	$("#min-menu").addClass("in");
+
 
   // Flikity Carousel
   	var arrowStyle = { 
@@ -97,8 +80,46 @@ $(function(){
 		cellAlign: checkView(991) ? "left" : "center"
 	});
 
-	// NEW
-	var carouselNews = $('.carousel-news').flickity({
+	// RANGE
+	var carouselRange = $('.carousel-range .carousel-content').flickity({
+		//setGallerySize: false,
+		autoPlay: 3000,
+		arrowShape: arrowStyle,
+		imagesLoaded: true,
+		prevNextButtons: true,
+		draggable: !checkView(991),
+		wrapAround: true,
+		//adaptiveHeight: true,
+		//selectedAttraction: 0.2,
+		//friction: 0.2,
+		//rightToLeft: true,
+		pageDots: false,
+		//contain: true,
+		percentPosition: true,
+		cellAlign: 'center'
+	});
+
+	// Certification
+	var carouselCerf = $('.carousel-cerf .carousel-content').flickity({
+		//setGallerySize: false,
+		autoPlay: 3000,
+		arrowShape: arrowStyle,
+		imagesLoaded: true,
+		prevNextButtons: true,
+		draggable: !checkView(991),
+		wrapAround: true,
+		//adaptiveHeight: true,
+		//selectedAttraction: 0.2,
+		//friction: 0.2,
+		//rightToLeft: true,
+		pageDots: false,
+		//contain: true,
+		percentPosition: true,
+		cellAlign: 'center'
+	});
+
+	// REVIEWS
+	var carouselReviews = $('.carousel-reviews .carousel-content').flickity({
 		//setGallerySize: false,
 		autoPlay: 3000,
 		arrowShape: arrowStyle,
@@ -247,75 +268,6 @@ $(function(){
 	});
 
 
-	//PAGES REV SLIDER
-	if( $('.rev-slider-page') )
-	    $('.rev-slider-page').revolution({
-				delay:6000,
-				//startwidth: $( window ).width() < 992 ? $( window ).width() : 1170,
-				//startwidth: 1170,
-				startheight: checkView(991) ? 645 : 645,
-				autoHeight:"off",
-				fullScreenAlignForce:"off",
-
-				onHoverStop:"off",
-
-				thumbWidth:100,
-				thumbHeight:50,
-				thumbAmount:3,
-
-				hideThumbsOnMobile:"off",
-				hideBulletsOnMobile:"on",
-				hideArrowsOnMobile:"off",
-				hideThumbsUnderResoluition:0,
-
-				hideThumbs:-1,
-				hideTimerBar:"on",
-
-				keyboardNavigation:"off",
-
-				navigationType:"bullet",
-				navigationArrows:"small",
-				navigationStyle:"round",
-
-				navigationHAlign:"center",
-				navigationVAlign:"bottom",
-				navigationHOffset: 0,
-				navigationVOffset:-30,
-
-				soloArrowLeftHalign:"left",
-				soloArrowLeftValign:"center",
-				soloArrowLeftHOffset:20,
-				soloArrowLeftVOffset:0,
-
-				soloArrowRightHalign:"right",
-				soloArrowRightValign:"center",
-				soloArrowRightHOffset:20,
-				soloArrowRightVOffset:0,
-
-
-				touchenabled:"off",
-				swipe_velocity:"0.7",
-				swipe_max_touches:"1",
-				swipe_min_touches:"1",
-				drag_block_vertical:"false",
-
-				stopAtSlide:-1,
-				stopAfterLoops:-1,
-				hideCaptionAtLimit:0,
-				hideAllCaptionAtLilmit:0,
-				hideSliderAtLimit:0,
-
-				fullWidth:"on",
-				fullScreen:"off",
-				fullScreenOffsetContainer: "",
-
-				dottedOverlay:"none",
-				forceFullWidth:"off",
-
-	      shadow:0
-	    });
-
-
 
 
 
@@ -462,7 +414,7 @@ function scrolledDiv(el) {
 		   window.revSlider = $('.rev-slider').revolution({
 					delay:6000,
 					startwidth: $( window ).width() < 992 ? $( window ).width() : 1170,
-					startheight: $( window ).width() < 992 ? 400 : 750,
+					startheight: $( window ).width() < 992 ? 500 : 750,
 					autoHeight:"off",
 					fullScreenAlignForce:"off",
 
