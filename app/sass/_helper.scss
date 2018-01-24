@@ -69,7 +69,8 @@ html{
 		margin-right: 5*$i+px;}}
 
 .m-auto{
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 //--------------------Parag-MARGIN
@@ -413,8 +414,8 @@ html{
 
 
 
-.float-center{
-	float: center;
+.float-none{
+	float: none;
 }
 .float-left{
 	float: left;

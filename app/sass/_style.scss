@@ -552,7 +552,7 @@ dib{
 	.pagination{
 		li{
 			display: inline-block;
-			border-radius: 50%;
+			border-radius: 5px;
 			margin: 0 5px;
 			font-weight: 500;
 			&:hover{
@@ -569,7 +569,7 @@ dib{
 
 			}
 			&.active{
-				background-color: $color-4;
+				background-color: $color-1;
 				a{color: white;}
 				&:hover{
 					a{
@@ -592,8 +592,6 @@ dib{
 }
 
 //LISTING
-
-
 
 [class*='list-style']{
 	ul{
@@ -694,16 +692,18 @@ $header-min-menu: 90px;
 	right: 0;
 	left: 0;
 	position: relative;
-
-	&:before{
-		@extend .claf;
-		//background-color: $color-1;
-		background-image: url("../img/texture/rhomb.png");
-    height: 20px;
-    bottom: -5px;
-    background-position-y: 100%;
-    top: unset;
-    z-index: -1;
+		&:before{
+			@extend .claf;
+			//background-color: $color-1;
+			@media (min-width: 992px){
+				background-image: url("../img/texture/rhomb.png");
+		    height: 20px;
+		    bottom: -5px;
+		    background-position-y: 100%;
+		    top: unset;
+		    z-index: -1;
+		  }
+		
 	}
 
 }
@@ -1224,28 +1224,31 @@ blockquote{
 main{
 	overflow: hidden;
 	position: relative;
-	min-height: 600px;
+	min-height: 300px;
 	color: black;
 	p{
 		line-height: 170%;
 	}
 
 }
-img[align="right"]{
-	margin: 15px;
-	margin-right: 0;
-}
-img[align="left"]{
-	margin: 15px;
-	margin-left: 0;
-}
+
 [align="right"]{
-	margin: 15px;
+	margin: 20px;
 	margin-right: 0;
 }
 [align="left"]{
-	margin: 15px;
+	margin: 20px;
 	margin-left: 0;
+}
+
+@media (max-width:767px){
+	[align="right"], [align="left"]{
+		margin: 15px 0;
+		padding: 0 15px;
+		width: 100%;
+		max-width: 100%;
+	}
+	
 }
 
 .main-content{
@@ -1648,7 +1651,7 @@ a[target="_blank"]{
 			background-repeat: no-repeat;
 			background-image: url("../img/other/img-circle-border.png");
 			background-position-y: 90px;
-			background-position-x: 1.5px;
+			background-position-x: 0;
 		}
 	}
 	.top-content{
@@ -1865,6 +1868,15 @@ a[target="_blank"]{
 
 
 
+.cooperation{
+	.btn-def{
+		background-color: white;
+		color: $color-1;
+		&:hover{
+
+		}
+	}
+}
 
 
 
@@ -1873,11 +1885,51 @@ a[target="_blank"]{
 
 
 
+.vacancies-items{
+	@include align-cells(100, 2, table);
+	@media ( max-width: 991px ){
+		@include align-cells(100, 1, table);
+	}
+	figure{
+		min-height: 300px;
+	}
+}
 
 
 
+.productions-items{
+	@include align-cells(90, 4, table);
+	@media ( max-width: 991px ){
+
+		@include align-cells(100, 1, table);
+		figure{.img-content{
+			img{ 
+				width: 100%; 
+			}
+		}}
+
+	}
+	figure{
+		min-height: 300px;
+	}
+	.btn-icon{
+		border: 1px solid transparent;
+		a{
+			padding: 8px 30px;
+		}
+		&:hover{
+			border-color: white;
+		}
+	}
 
 
+
+}
+
+
+.production{
+
+}
 
 
 
@@ -2238,5 +2290,5 @@ a[target="_blank"]{
 
 
 
-
+@import "_helper.scss";
 @import "_media.scss"; //------ 	END 	------------------------
