@@ -16097,7 +16097,7 @@ dib {
     display: inline-block; }
     .menu ul > li > a {
       display: block;
-      padding: 5px 15px; }
+      padding: 5px 10px; }
     .menu ul > li.active, .menu ul > li:hover {
       color: white;
       background-color: #3c5caf; }
@@ -16112,8 +16112,6 @@ dib {
         visibility: visible; }
         .menu ul > li.active .sub-menu-1 li, .menu ul > li:hover .sub-menu-1 li {
           background-color: transparent; }
-        .menu ul > li.active .sub-menu-1 a, .menu ul > li:hover .sub-menu-1 a {
-          text-decoration: underline; }
   .menu li {
     text-align: left;
     display: inline-block;
@@ -16125,15 +16123,19 @@ dib {
     font-size: 0.95em; }
   .menu .sub-menu-1 {
     color: white;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
+    -webkit-border-radius: 0 0 15px 15px;
+    border-radius: 0 0 15px 15px;
     padding: 12px 22px; }
+    .menu .sub-menu-1 li {
+      width: 100%; }
     .menu .sub-menu-1 a {
       -webkit-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
       color: #3c5caf;
       padding: 10px 5px; }
+      .menu .sub-menu-1 a:hover {
+        text-decoration: underline; }
   .menu [class*="sub"] {
     visibility: hidden;
     position: absolute;
@@ -16173,6 +16175,9 @@ dib {
   -webkit-box-shadow: 0 0 20px 0 black;
   box-shadow: 0 0 20px 0 black;
   background-color: #3c5caf; }
+
+.min-menu-skin {
+  height: 100%; }
 
 .bar {
   width: 60px;
@@ -16237,7 +16242,7 @@ label.hamburger {
       -webkit-box-shadow: none;
       box-shadow: none; }
   .modal-dialog .icon-bar {
-    background-color: #ffa800;
+    background-color: #3c5caf;
     display: inline-block;
     height: 2px; }
     .modal-dialog .icon-bar:nth-child(1) {
@@ -16282,17 +16287,23 @@ label.hamburger {
 #fail-message {
   color: red; }
 
+#error {
+  color: red; }
+
+#message {
+  color: green; }
+
 .bid-modal h1, .bid-modal h2, .bid-modal h3 {
-  color: #ffa800; }
+  color: #3c5caf; }
 
 .bid-modal button {
-  background-color: #ffa800; }
+  background-color: #3c5caf; }
 
 .bid-modal form {
   margin-bottom: 30px; }
   .bid-modal form label {
     font-size: 0.9em;
-    color: #ffa800; }
+    color: #3c5caf; }
   .bid-modal form input {
     height: 45px;
     font-size: 1.2em; }
@@ -16303,14 +16314,14 @@ label.hamburger {
     padding-top: 0.2em;
     padding-bottom: 0; }
     .bid-modal form .input input:focus ~ label:before {
-      border-top-color: #ffa800; }
+      border-top-color: #3c5caf; }
     .bid-modal form .input input:focus ~ label span {
       color: #ffa800 !important; }
     .bid-modal form .input label:before {
-      border-top-color: #ffa800; }
+      border-top-color: #3c5caf; }
     .bid-modal form .input textarea ~ label:before {
       height: 4em;
-      border-top-color: #ffa800; }
+      border-top-color: #3c5caf; }
   .bid-modal form .textarea {
     display: block;
     margin: 30px 0;
@@ -16318,7 +16329,7 @@ label.hamburger {
     .bid-modal form .textarea textarea {
       resize: none;
       padding: 0.5em;
-      border-top: 2px solid #ffa800;
+      border-top: 2px solid #3c5caf;
       -webkit-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
@@ -16658,11 +16669,13 @@ a[target="_blank"] {
 /*
 					------- MAIN -------
 */
-.short-brands {
+.bg-short-brands {
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top: 1.5%;
   background-image: url("../img/bg/short-brands.png"); }
+
+.short-brands {
+  padding-top: 1.5%; }
 
 .short-brands-content figure {
   -webkit-filter: brightness(0%) invert(100%);
@@ -16839,7 +16852,7 @@ a[target="_blank"] {
 .about-banner {
   background-position: center center; }
   .about-banner .banner-content {
-    height: 750px; }
+    height: 500px; }
   .about-banner h1 {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     border-bottom: 5px solid white; }
@@ -16892,20 +16905,20 @@ a[target="_blank"] {
   .vacancies-items figure {
     min-height: 300px; }
 
-.productions-items {
+.production-items {
   margin-left: -1.5%;
   margin-right: -1.5%;
   letter-spacing: -6px; }
-  .productions-items * {
+  .production-items * {
     letter-spacing: 0; }
-  .productions-items figure {
+  .production-items figure {
     width: 22.5%;
     margin-left: 1.25%;
     margin-right: 1.25%;
     display: inline-table;
     vertical-align: top;
     width: 22.5%; }
-    .productions-items figure .img-content img {
+    .production-items figure .img-content img {
       max-height: 100%;
       max-width: 100%;
       width: auto;
@@ -16913,36 +16926,39 @@ a[target="_blank"] {
       margin: 0 auto;
       display: block; }
   @media (max-width: 991px) {
-    .productions-items {
+    .production-items {
       margin-left: -0.25%;
       margin-right: -0.25%;
       letter-spacing: -6px; }
-      .productions-items * {
+      .production-items * {
         letter-spacing: 0; }
-      .productions-items figure {
+      .production-items figure {
         width: 100%;
         margin-left: 0%;
         margin-right: 0%;
         display: inline-table;
         vertical-align: top;
         width: 100%; }
-        .productions-items figure .img-content img {
+        .production-items figure .img-content img {
           max-height: 100%;
           max-width: 100%;
           width: auto;
           height: auto;
           margin: 0 auto;
           display: block; }
-      .productions-items figure .img-content img {
+      .production-items figure .img-content img {
         width: 100%; } }
-  .productions-items figure {
+  .production-items figure {
     min-height: 300px; }
-  .productions-items .btn-icon {
+  .production-items .btn-icon {
     border: 1px solid transparent; }
-    .productions-items .btn-icon a {
+    .production-items .btn-icon a {
       padding: 8px 30px; }
-    .productions-items .btn-icon:hover {
+    .production-items .btn-icon:hover {
       border-color: white; }
+
+.production-article .btn-icon {
+  border: 1px solid #3c5caf; }
 
 /*
 										 --- FOOTER ---
@@ -16953,7 +16969,8 @@ a[target="_blank"] {
   min-height: 400px;
   background-image: url("../img/bg/footer-bg.jpg");
   background-repeat: no-repeat;
-  background-position-y: bottom; }
+  background-position-y: bottom;
+  background-position-y: 100%; }
   #footer p {
     line-height: 180%; }
   #footer .copyright, #footer .dev {
@@ -17003,6 +17020,19 @@ a[target="_blank"] {
   z-index: 1; }
   [data-fancybox]:focus {
     outline: 0; }
+
+.flickity-prev-next-button svg {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7); }
+
+.flickity-prev-next-button, .flickity-prev-next-button:hover, .flickity-prev-next-button:focus {
+  background-color: rgba(255, 255, 255, 0.7); }
+  .flickity-prev-next-button .arrow, .flickity-prev-next-button:hover .arrow, .flickity-prev-next-button:focus .arrow {
+    fill: #3c5caf; }
+
+.flickity-prev-next-button .arrow {
+  fill: #3c5caf; }
 
 .carousel-article {
   position: relative;
@@ -17108,6 +17138,9 @@ a[target="_blank"] {
   border-top: 0;
   border-left: 0; }
 
+.carousel-cerf .flickity-prev-next-button, .carousel-cerf .flickity-prev-next-button:hover, .carousel-cerf .flickity-prev-next-button:focus {
+  background-color: rgba(60, 92, 175, 0.5); }
+
 .carousel-cerf .flickity-prev-next-button svg {
   -webkit-transform: scale(0.85);
   -ms-transform: scale(0.85);
@@ -17120,19 +17153,6 @@ a[target="_blank"] {
 @media (max-width: 992px) {
   .carousel-cerf .carousel-cell {
     width: 100%; } }
-
-.flickity-prev-next-button svg {
-  -webkit-transform: scale(0.7);
-  -ms-transform: scale(0.7);
-  transform: scale(0.7); }
-
-.flickity-prev-next-button, .flickity-prev-next-button:hover, .flickity-prev-next-button:focus {
-  background-color: rgba(255, 255, 255, 0.7); }
-  .flickity-prev-next-button .arrow, .flickity-prev-next-button:hover .arrow, .flickity-prev-next-button:focus .arrow {
-    fill: #3c5caf; }
-
-.flickity-prev-next-button .arrow {
-  fill: #3c5caf; }
 
 .carousel-stand .carousel {
   background: #FAFAFA;

@@ -753,7 +753,7 @@ $header-min-menu: 90px;
 			display: inline-block;
 			& > a{
 				display: block;
-				padding: 5px 15px;
+				padding: 5px 10px;
 			}
 			&.active, &:hover{
 				color: white;
@@ -764,9 +764,6 @@ $header-min-menu: 90px;
 					visibility: visible;
 					li{
 						background-color: transparent;
-					}
-					a{
-						text-decoration: underline;
 					}
 				}
 			}
@@ -783,12 +780,20 @@ $header-min-menu: 90px;
 
 	.sub-menu-1{
 		color: white;
-		border-radius: 50%;
+		border-radius: 0 0 15px 15px;
 		padding: 12px 22px;
+		li{
+			width: 100%;
+		}
 		a{
 			transition: all 0.3s ease-in-out;
 			color: $color-1;
 			padding: 10px 5px;
+			&:hover{
+				
+					text-decoration: underline;
+				
+			}
 		}
 
 	}
@@ -827,8 +832,9 @@ $header-min-menu: 90px;
 	color: white;
 	box-shadow: 0 0 20px 0 black;
 	background-color: $color-1;
-
-
+}
+.min-menu-skin{
+	height: 100%;
 }
 .bar{
 	width: 60px;
@@ -936,7 +942,7 @@ label{
 	}
 
 	.icon-bar{
-		background-color: $color-4;
+		background-color: $color-1;
 
 		display: inline-block;
     height: 2px;
@@ -993,18 +999,25 @@ label{
 #fail-message{
 	color: red;
 }
+#error{
+	color: red;
+}
+#message{
+	color: green;
+}
+
 .bid-modal{
 	h1, h2, h3{
-		color: $color-4;
+		color: $color-1;
 	}
 	button{
-		background-color: $color-4;
+		background-color: $color-1;
 	}
 	form{
 		margin-bottom: 30px;
 		label{
 			font-size: 0.9em;
-			color: $color-4;
+			color: $color-1;
 		}
 		input{
 			height: 45px;
@@ -1022,7 +1035,7 @@ label{
 				&:focus{
 					&~label{
 						&:before{
-							border-top-color: $color-4;
+							border-top-color: $color-1;
 						}
 						span{
 							color:$color-4 !important;
@@ -1032,11 +1045,11 @@ label{
 			}
 			label:before{
 				//height: 2em;
-				border-top-color: $color-4;
+				border-top-color: $color-1;
 			}
 			textarea~label:before{
 				height: 4em;
-				border-top-color: $color-4;
+				border-top-color: $color-1;
 			}
 			
 
@@ -1049,7 +1062,7 @@ label{
 			textarea{
 				resize: none;
 				padding: 0.5em;
-				border-top: 2px solid $color-4;
+				border-top: 2px solid $color-1;
 				transition: all 0.3s ease-in-out;
 				height: 60px;
 				&:focus{
@@ -1520,7 +1533,11 @@ a[target="_blank"]{
 
 
 
-
+.bg-short-brands{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('../img/bg/short-brands.png');
+}
 
 
 
@@ -1528,10 +1545,7 @@ a[target="_blank"]{
 //SHORT_BRANDS
 .short-brands{
     //background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     padding-top: 1.5%;
-    background-image: url('../img/bg/short-brands.png');
 }
 .short-brands-content{
 	figure{
@@ -1852,7 +1866,7 @@ a[target="_blank"]{
 .about-banner{
 	background-position: center center;
 	.banner-content{
-		height: 750px;
+		height: 500px;
 	}
 	h1{
 		text-shadow: 0 0 10px rgba(black, 0.9);
@@ -1897,7 +1911,7 @@ a[target="_blank"]{
 
 
 
-.productions-items{
+.production-items{
 	@include align-cells(90, 4, table);
 	@media ( max-width: 991px ){
 
@@ -1926,14 +1940,16 @@ a[target="_blank"]{
 
 }
 
+//productions
+.productions-content{}
 
-.production{
 
+
+.production-article{
+	.btn-icon{
+		border: 1px solid $color-1;
+	}
 }
-
-
-
-
 
 
 
@@ -1953,6 +1969,7 @@ a[target="_blank"]{
 	background-image: url("../img/bg/footer-bg.jpg");
 	background-repeat: no-repeat;
 	background-position-y: bottom;
+	background-position-y: 100%;
 	p{
 		line-height: 180%;
 	}
@@ -2036,6 +2053,44 @@ a[target="_blank"]{
 
 
 // FLICKITY 
+
+
+
+
+
+
+
+
+
+.flickity-prev-next-button{
+	svg{
+		transform: scale( 0.7 );
+	}
+	&, &:hover, &:focus{
+		background-color: rgba(white, 0.7);
+		.arrow{
+			fill: $color-1;
+		}
+	}
+	.arrow{
+		fill: $color-1;
+	}
+	&.previous{
+	}
+	&.next{
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 .carousel-article{
   position: relative;
@@ -2176,8 +2231,6 @@ a[target="_blank"]{
 .carousel-cerf{
 
 	.carousel-cell{
-		
-		
 		margin: 0;
 	}
 	.img-content{
@@ -2196,6 +2249,9 @@ a[target="_blank"]{
 		border-left: 0;
 	}
 	.flickity-prev-next-button{
+		&, &:hover, &:focus{
+			background-color: rgba(60, 92, 175, 0.50);
+		}
 		svg{
 			transform: scale(0.85);
 		}
@@ -2220,30 +2276,6 @@ a[target="_blank"]{
 
 
 
-
-
-
-
-
-.flickity-prev-next-button{
-	svg{
-		transform: scale( 0.7 );
-	}
-	&, &:hover, &:focus{
-		background-color: rgba(white, 0.7);
-		.arrow{
-			fill: $color-1;
-		}
-	}
-	.arrow{
-		fill: $color-1;
-	}
-	&.previous{
-	}
-	&.next{
-
-	}
-}
 
 
 

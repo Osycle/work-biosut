@@ -36,7 +36,9 @@
 					<!-- LOGOTYPE -->
 					<div class="logo pie-xs-elastic-2">
 						<div class="img-content pie-xs-2">
-							<img src="img/logo.png">
+							<a href="">
+								<img src="img/logo.png">
+							</a>
 						</div>
 						<div class="desc-content pie-xs-10 p-h-5">
 							<font class="font-family-2 color-1 text-uppercase">BIO-SUT</font>
@@ -55,7 +57,14 @@
 									</ul>
 								</li>
 								<li><a href="cooperation.html">Сотрудничество</a></li>
-								<li><a href="production.html">Продукция</a></li>
+								<li><a href="productions.html">Продукция</a>
+									<ul class="sub-menu-1">
+										<li><a href="production.html">Angel</a></li>
+										<li><a href="production.html">Pampers</a></li>
+										<li><a href="production.html">Bray</a></li>
+										<li><a href="production.html">One media group</a></li>
+									</ul>
+								</li>
 								<li><a href="contacts.html">Контакты</a></li>
 							</ul>
 						</nav>
@@ -94,7 +103,14 @@
 									</ul>
 								</li>
 								<li><a href="cooperation.html">Сотрудничество</a></li>
-								<li><a href="production.html">Продукция</a></li>
+								<li><a href="productions.html">Продукция</a>
+									<ul class="sub-menu-1">
+										<li><a href="production.html">Angel</a></li>
+										<li><a href="production.html">Pampers</a></li>
+										<li><a href="production.html">Bray</a></li>
+										<li><a href="production.html">One media group</a></li>
+									</ul>
+								</li>
 								<li><a href="contacts.html">Контакты</a></li>
 							</ul>
 						</div>
@@ -118,6 +134,58 @@
 
 
 
+	<!-- BID MODAL-->
+	<div class="bid-modal modal fade animated" id="bidModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<button type="button" class="btn" data-dismiss="modal"><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
+				<div class="modal-body">
+
+					<div class="col-md-12 align-center success-info">
+						<div id="message"></div>
+						<div id="error"></div>
+					</div>
+
+					<form method="post" action="" class="contact-form">
+						<h3>Связаться с нами</h3>
+						<input id="validator" class="hide" type="text" name="validator" value="">
+						<!-- NAME -->
+						<span class="input input--jiro input-name">
+							<input class="input__field input__field--jiro" type="text" name="name" autocomplete="off" />
+							<label class="input__label input__label--jiro" for="input-1">
+								<span class="input__label-content input__label-content--jiro">Имя, фамилия</span>
+							</label>
+						</span>
+						<!-- EMAIL -->
+						<span class="input input--jiro input-email">
+							<input class="input__field input__field--jiro" type="text" name="email" autocomplete="off" />
+							<label class="input__label input__label--jiro" for="input-2">
+								<span class="input__label-content input__label-content--jiro">Электронная почта</span>
+							</label>
+						</span>
+						<!-- TEL -->
+						<span class="input input--jiro input-phone">
+							<input class="input__field input__field--jiro" type="text" name="tel" autocomplete="off" />
+							<label class="input__label input__label--jiro" for="input-3">
+								<span class="input__label-content input__label-content--jiro">Номер телефона</span>
+							</label>
+						</span>
+						<!-- TEXTAREA -->
+						<span class="textarea">
+							<label class=""><span class="">Сообщение</span></label>
+							<textarea name="message" type="text"></textarea>
+						</span>
+						<div class="form-footer">
+							<button type="submit" class="align-right btn-def submit">
+								<b>Отправить</b>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
@@ -144,13 +212,10 @@
 		<div class="main-content list-style-1 inside align-center-sm">
 
 
-
-				<div class="row production">
-
-
+				<div class="row production-article">
 					<div class="container">
 
-						<div class="production-content figure-m-v-30 m-v-30 color-black">
+						<div class="production-article-content figure-m-v-30 m-v-30 color-black">
 
 							<h1 class="m-b-0">Продукция</h1>
 							<p class="letter-3 align-center">Самые свежие продукты для вас</p>
@@ -159,28 +224,87 @@
 		
 							<div class="text-content m-v-60 clearfix">
 
-								<div class="col-md-6 p-h-15">
-									<img src="img/other/production-article-1.jpg" align="left" class="m-t-0">
+								<!-- CARS-ITEM -->
+								<div class="cars-item col-xs-12 p-h-30 p-v-45" data-aos="fade-up">
+									<!-- CAROUSEL -->
+									<div class="carousel-article car-img col-md-6 p-h-15 m-t-0" align="left">
+
+										<div class="carousel carousel-main">
+										  <div class="carousel-cell">
+												<div class="img-content">
+													<a href="img/other/production-article-1.jpg" data-fancybox="gallery">
+														<img src="img/other/production-article-1.jpg">
+													</a>
+												</div>
+										  </div>
+
+										  <div class="carousel-cell">
+												<div class="img-content">
+													<a href="img/other/production-article-1.jpg" data-fancybox="gallery">
+														<img src="img/other/production-article-1.jpg">
+													</a>
+												</div>
+										  </div>
+
+										  <div class="carousel-cell">
+												<div class="img-content">
+													<a href="img/other/production-article-1.jpg" data-fancybox="gallery">
+														<img src="img/other/production-article-1.jpg">
+													</a>
+												</div>
+										  </div>
+
+										</div>
+
+										<div class="carousel carousel-nav">
+										  <div class="carousel-cell">
+												<div class="img-content">
+													<img src="img/other/production-article-1.jpg">
+												</div>
+										  </div>
+
+										  <div class="carousel-cell">
+												<div class="img-content">
+													<img src="img/other/production-article-1.jpg">
+												</div>
+										  </div>
+										  	
+											<div class="carousel-cell">
+												<div class="img-content">
+													<img src="img/other/production-article-1.jpg">
+												</div>
+										  </div>
+
+										</div>
+									</div>
+									<!-- CAR-DESC -->
+									<div class="car-desc">
+										<h2>Lorem Ipsum</h2>
+										<p>
+											С помощью этого раздела вы сможете получить  необходимые для современных животноводческих комплексов  информацию о современных доильных установках Для того чтобы ознакомиться интересующие вас раздел пройдите по линку.
+										</p>
+										<div class="details-content">
+												<span class="btn-icon m-v-15">
+													<a data-toggle="modal" data-target="#bidModal" role="button"><span class="vam">Заказать </span></a>
+												</span>
+											<p>Состав: <br>
+												<ul>
+													<li>Proin at elit a felis ullamcorper ultricies.</li>
+													<li>Curabitur a turpis ac nisi aliquet rhoncus.</li>
+													<li>Nam eget ipsum auctor, commodo justo non, fringilla massa.</li>
+													<li>Duis sit amet velit non nisi facilisis dignissim sed eget quam.</li>
+												</ul>
+											</p>
+											<br>
+											<p>Цена: <br>
+												<big class="p-h-30"><strong class="text-uppercase color-1">999999</strong></big>
+											</p>
+											
+										</div>
+									</div>
+
 								</div>
 
-								<div class="col-md-6 p-h-15">
-									<h2>Lorem Ipsum</h2>
-									<p>
-										С помощью этого раздела вы сможете получить  необходимые для современных животноводческих комплексов  информацию о современных доильных установках Для того чтобы ознакомиться интересующие вас раздел пройдите по линку.
-									</p>
-									<div class="details-content">
-										<h5>Состав:</h5>
-										<ul>
-											<li>Proin at elit a felis ullamcorper ultricies.</li>
-											<li>Curabitur a turpis ac nisi aliquet rhoncus.</li>
-											<li>Nam eget ipsum auctor, commodo justo non, fringilla massa.</li>
-											<li>Duis sit amet velit non nisi facilisis dignissim sed eget quam.</li>
-										</ul>
-										<p>Цена:</p>
-										<big class="p-h-30"><strong class="text-uppercase color-1">999999</strong></big>
-									</div>
-								</div>
-							
 
 
 
@@ -259,7 +383,7 @@
 								<li><a href="index.html">Главная</a></li>
 								<li><a href="about.html">О компаний</a></li>
 								<li><a href="cooperation.html">Сотрудничество</a></li>
-								<li><a href="production.html">Продукция</a></li>
+								<li><a href="productions.html">Продукция</a></li>
 								<li><a href="contacts.html">Контакты</a></li>
 							</ul>
 						</nav>
