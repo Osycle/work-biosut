@@ -16678,6 +16678,8 @@ a[target="_blank"] {
   padding-top: 1.5%; }
 
 .short-brands-content figure {
+  padding: 15px;
+  width: 33.33333%;
   -webkit-filter: brightness(0%) invert(100%);
   filter: brightness(0%) invert(100%);
   -webkit-transition: all 0.3s ease-in-out;

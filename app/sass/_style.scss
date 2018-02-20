@@ -1549,6 +1549,8 @@ a[target="_blank"]{
 }
 .short-brands-content{
 	figure{
+		padding: 15px;
+		width: (100/3)+%;
 		filter: brightness(0%) invert(100%);
 		transition: all 0.3s ease-in-out;
 		&:hover{
